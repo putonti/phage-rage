@@ -256,9 +256,9 @@ class VParse:
         Arguments:
              stats_dir (str): Directory output file is located. 
         Outputs:
-            krona_stats.csv: Hits to Genome, Taxonomy, Species; tab separated. 
+            krona_stats.tsv: Hits to Genome, Taxonomy, Species; tab separated. 
         """
-        krona_file = os.path.join(stats_dir, 'krona_stats.csv')
+        krona_file = os.path.join(stats_dir, 'krona_stats.tsv')
         print('Writing out for Krona to:', krona_file)
         with open(krona_file, 'w') as output_handle:
             for genome in self.genomes:
@@ -280,9 +280,9 @@ class VParse:
         Arguments:
              stats_dir (str): Directory output file is located.
         Outputs: 
-            hitviz_stats.csv: Number of hits to each protein in each genome.
+            hitviz_stats.tsv: Number of hits to each protein in each genome.
         """
-        hitviz_file = os.path.join(stats_dir, 'hitviz_stats.csv')
+        hitviz_file = os.path.join(stats_dir, 'hitviz_stats.tsv')
         print('Writing out for HitViz to:', hitviz_file)
         with open(hitviz_file, 'w') as output_handle:
             for genome in self.genomes:
@@ -305,12 +305,12 @@ class VParse:
         Arguments:
              stats_dir (str): Directory output file is located. 
         Outputs: 
-            coverage.csv: Coverage information on each genome with 
+            coverage.tsv: Coverage information on each genome with 
                           at least one hit. 
-            hits_by_protein.csv: Accession number of each protein with number of hits. 
+            hits_by_protein.tsv: Accession number of each protein with number of hits. 
         """
         print('Writing out summary statistics...')
-        coverage_file = os.path.join(stats_dir, 'coverage.csv')
+        coverage_file = os.path.join(stats_dir, 'coverage.tsv')
         with open(coverage_file, 'w') as output_handle:
             output_handle.write('Accession Number\t'
                                 'Spp\t'
@@ -331,7 +331,7 @@ class VParse:
                     output = '\t'.join(genome_stats)
                     output_handle.write('%s\n' % output)
 
-        file_name = 'hits_by_protein.csv'
+        file_name = 'hits_by_protein.tsv'
         protein_hits_file = os.path.join(stats_dir, file_name)
         with open(protein_hits_file ,'w') as output_handle:
             for genome in self.genomes:
