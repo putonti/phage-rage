@@ -76,7 +76,7 @@ class VAssemble:
         if self.assembler == 'spades':
             print('Running spades..')
             p = subprocess.check_call(['spades.py',
-                                       '--threads', self.threads,
+                                       '--meta --threads', self.threads,
 				                       '-o', self.asm_dir
                                       ]
                                       + formatted_input)
