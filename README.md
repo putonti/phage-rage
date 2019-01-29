@@ -171,6 +171,7 @@ Subdirectory containing the output of the selected assembler.
   * Jonathon Brenner
   * Thomas Hatzopoulos
   * Zach Romer 
+  * Jonathan Felipe Xavier
   * Catherine Putonti 
   
   ### Contact: putonti.lab@gmail.com.
